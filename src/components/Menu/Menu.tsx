@@ -1,9 +1,9 @@
 import React from 'react';
-import {Character} from "../../types";
+import {mainMENUType} from "../../types";
 import './Menu.css';
 
 interface Props {
-  MENU: Character[],
+  MENU: mainMENUType[],
 }
 
 const Menu: React.FC<Props> = ({MENU}) => {
@@ -16,7 +16,6 @@ const Menu: React.FC<Props> = ({MENU}) => {
             <div
               key={id}
               className="Item"
-              // onClick={() => props.onAdd(id)}
             >
               <img
                 src={item.image}

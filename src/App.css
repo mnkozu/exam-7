@@ -1,6 +1,16 @@
 .FastFoodHeaderTitle {
-    background: #de956d;
-    color: white;
-    padding: 20px 0 20px 80px;
-    margin: 0 0 20px 0;
+  background: #de956d;
+  color: white;
+  padding: 20px 0 20px 80px;
+  margin: 0 0 20px 0;
+}
+
+.Container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.FastFood {
+  display: flex;
+  justify-content: space-between;
 }
