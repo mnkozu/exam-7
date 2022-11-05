@@ -1,0 +1,32 @@
+.Menu {
+  width: 60%;
+}
+
+.ItemTitle {
+  margin: 10px;
+}
+
+.MenuInner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Image {
+  width: 80px;
+  height: auto;
+}
+
+.Item {
+  width: 48%;
+  border: 2px solid #cc7711;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.Item:hover {
+ background: rgba(234, 175, 65, 0.4);
+}
