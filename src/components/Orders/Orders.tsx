@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {PropsWithChildren, ReactElement} from 'react';
 import {mainMENUType, MenuType} from "../../types";
 import Order from "../Order/Order";
 import './Orders.css';
 
-interface Props {
+interface Props extends PropsWithChildren{
   menu: MenuType[],
   MENU: mainMENUType[];
+  onDel: (index: number) => void;
+  totalPrice: ReactElement;
 }
 
-const Orders: React.FC<Props> = ({menu, MENU}) => {
+const Orders: React.FC<Props> = ({menu, MENU, onDel, totalPrice}) => {
   return (
     <div className="Orders">
       <h3 className="ItemTitle">Order Details</h3>
@@ -20,11 +22,13 @@ const Orders: React.FC<Props> = ({menu, MENU}) => {
               name={item.name}
               count={item.count}
               price={MENU[index].price}
+              onDel={() => onDel(index)}
             />
           )
         }
         return null;
       })}
+      <div>{totalPrice}</div>
     </div>
   );
 };

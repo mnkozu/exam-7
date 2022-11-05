@@ -4,18 +4,20 @@ import './Menu.css';
 
 interface Props {
   MENU: mainMENUType[],
+  onAdd: (index: number) => void;
 }
 
-const Menu: React.FC<Props> = ({MENU}) => {
+const Menu: React.FC<Props> = ({MENU, onAdd}) => {
   return (
     <div className="Menu">
       <h3 className="ItemTitle">Add Items</h3>
       <div className="MenuInner">
-        {MENU.map((item, id) => {
+        {MENU.map((item, index) => {
           return (
             <div
-              key={id}
+              key={index}
               className="Item"
+              onClick={() => onAdd(index)}
             >
               <img
                 src={item.image}
